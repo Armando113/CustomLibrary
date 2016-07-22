@@ -1,0 +1,5 @@
+C:\Users\Armando\Documents\GitHub\CustomLibrary\BDDataStructures\BDDataStructures\bin\Debug\BDDataStructures.dll
+C:\Users\Armando\Documents\GitHub\CustomLibrary\BDDataStructures\BDDataStructures\bin\Debug\BDDataStructures.pdb
+C:\Users\Armando\Documents\GitHub\CustomLibrary\BDDataStructures\BDDataStructures\obj\Debug\BDDataStructures.csprojResolveAssemblyReference.cache
+C:\Users\Armando\Documents\GitHub\CustomLibrary\BDDataStructures\BDDataStructures\obj\Debug\BDDataStructures.dll
+C:\Users\Armando\Documents\GitHub\CustomLibrary\BDDataStructures\BDDataStructures\obj\Debug\BDDataStructures.pdb
