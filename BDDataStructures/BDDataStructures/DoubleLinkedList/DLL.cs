@@ -161,7 +161,7 @@ public class DLL<T>
         if (_data != null)
         {
             //Set our iterator to the active
-            pIterator.SetNode(pActiveHead);
+            pIterator.SetStartNode(pActiveHead);
 
             //Walk the list, and find that Node!!
             while (pIterator.GetNode() != null)
