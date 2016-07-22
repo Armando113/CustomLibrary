@@ -46,6 +46,9 @@
     <Compile Include="DoubleLinkedList\DLL.cs" />
     <Compile Include="DoubleLinkedList\DLLIterator.cs" />
     <Compile Include="DoubleLinkedList\DLLNode.cs" />
+    <Compile Include="MapList\MapIterator.cs" />
+    <Compile Include="MapList\MapList.cs" />
+    <Compile Include="MapList\MapNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
