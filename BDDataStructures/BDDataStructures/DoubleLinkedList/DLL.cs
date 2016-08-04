@@ -27,6 +27,11 @@ public class DLL<T>
         {
             return GetAt(_index);
         }
+
+        set
+        {
+
+        }
     }
 
     //Internal methods
@@ -203,6 +208,28 @@ public class DLL<T>
 
         //Should everything go to hell
         return default(T);
+    }
+
+    protected bool SetAt(T _data, int _index)
+    {
+        //Set the iterator
+        pIterator.SetStartNode(pActiveHead);
+
+        //counter
+        int counter = 0;
+
+        //Walk the list
+        while(pIterator.GetNode() != null)
+        {
+            //Are we there yet?
+            if(counter == _index)
+            {
+
+            }
+        }
+
+        //In case everything goes to hell
+        return false;
     }
 
     //Public methods
