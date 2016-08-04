@@ -30,7 +30,7 @@ public class DLL<T>
 
         set
         {
-
+            SetAt(value, _index);
         }
     }
 
@@ -202,7 +202,7 @@ public class DLL<T>
             }
             //Count up
             counter++;
-            //Kepp walking Johnny
+            //Keep walking Johnny
             pIterator.GoNext();
         }
 
@@ -224,8 +224,15 @@ public class DLL<T>
             //Are we there yet?
             if(counter == _index)
             {
-
+                //We found it! Set the data and return true
+                pIterator.GetNode().SetData(_data);
+                return true;
             }
+
+            //Count up
+            counter++;
+            //Keep walking Johnny
+            pIterator.GoNext();
         }
 
         //In case everything goes to hell

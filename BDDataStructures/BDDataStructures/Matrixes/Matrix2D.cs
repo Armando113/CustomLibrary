@@ -95,13 +95,8 @@ public class Matrix2D<T>
         return _row[_column];
     }
 
-    
-
-
-    //Public functions
-
     //Get data at current location
-    public T GetData(int _x, int _y)
+    protected T GetData(int _x, int _y)
     {
         DLL<T> tRow = rowList[_y];
 
@@ -117,10 +112,45 @@ public class Matrix2D<T>
     }
 
     //Set data at current location
-    public bool SetData(T _data, int _x, int _y)
+    protected bool SetData(T _data, int _x, int _y)
     {
+        DLL<T> tRow = rowList[_y];
+
+        //Quick check that the row exists
+        if(tRow != null)
+        {
+            //Set data
+            tRow[_x] = _data;
+            //Return true
+            return true;
+        }
 
         //in case everything went wrong
         return false;
+    }
+
+    //Public Functions
+
+    public T GetAt(int _x, int _y)
+    {
+        int tx = _x;
+        int ty = _y;
+
+        if(tx < 0)
+        {
+            tx = 0;
+        }
+
+        if(ty < 0)
+        {
+            ty = 0;
+        }
+
+        return GetData(tx, ty);
+    }
+
+    public void RemoveAt(int _x, int _y)
+    {
+
     }
 }
