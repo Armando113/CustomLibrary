@@ -129,6 +129,18 @@ public class Matrix2D<T>
         return false;
     }
 
+    protected bool ContainsData(T _data)
+    {
+        //first, make sure data isn't null
+        if(_data != null)
+        {
+            //Search for the data in your row list
+        }
+
+        //Return false if we didn't find anything
+        return false;
+    }
+
     //Public Functions
 
     public T GetAt(int _x, int _y)
@@ -151,6 +163,22 @@ public class Matrix2D<T>
 
     public void RemoveAt(int _x, int _y)
     {
+        //Check if the numbers aren't negative
+        int tx = _x;
+        int ty = _y;
+        //is x negative?
+        if (tx < 0)
+        {
+            //Make it 0
+            tx = 0;
+        }
+        //Is y negative?
+        if (ty < 0)
+        {
+            //Make it 0
+            ty = 0;
+        }
 
+        SetData(default(T), _x, _y);
     }
 }

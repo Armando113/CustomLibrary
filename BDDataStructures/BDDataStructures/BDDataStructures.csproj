@@ -49,6 +49,9 @@
     <Compile Include="MapList\MapIterator.cs" />
     <Compile Include="MapList\MapList.cs" />
     <Compile Include="MapList\MapNode.cs" />
+    <Compile Include="Matrixes\Matrix2D.cs" />
+    <Compile Include="Matrixes\Matrix2DIterator.cs" />
+    <Compile Include="Matrixes\Matrix2DNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
