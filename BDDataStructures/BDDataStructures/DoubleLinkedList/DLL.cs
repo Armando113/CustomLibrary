@@ -239,6 +239,30 @@ public class DLL<T>
         return false;
     }
 
+    protected void ClearActive()
+    {
+        //Make sure that there are active nodes
+        if(pActiveHead != null)
+        {
+            //Set the iterator
+            pIterator.SetStartNode(pActiveHead);
+
+            //Walk through the list and send them to reserve
+            while(pIterator.GetNode() != null)
+            {
+                //Get the node in a temp
+                DLLNode<T> tNode = pIterator.GetNode();
+
+                //Advance to the next node
+                pIterator.GoNext();
+
+                //Erase the node and send it to reserve
+                RemoveActive(tNode);
+                AddReserve(tNode);
+            }
+        }
+    }
+
     //Public methods
     public bool Contains(T _node)
     {
@@ -356,5 +380,11 @@ public class DLL<T>
         }
 
         return -1;
+    }
+
+    //Clear the active list and send all nodes to reserve
+    public void Clear()
+    {
+        ClearActive();
     }
 }
