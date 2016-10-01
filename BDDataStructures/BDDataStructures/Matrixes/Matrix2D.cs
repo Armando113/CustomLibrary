@@ -142,21 +142,10 @@ public class Matrix2D<T>
     }
 
     //Public Functions
-
     public T GetAt(int _x, int _y)
     {
-        int tx = _x;
-        int ty = _y;
-
-        if(tx < 0)
-        {
-            tx = 0;
-        }
-
-        if(ty < 0)
-        {
-            ty = 0;
-        }
+        int tx = Math.Abs(_x);
+        int ty = Math.Abs(_y);
 
         return GetData(tx, ty);
     }
