@@ -5,6 +5,8 @@ class Vector3D
 {
 private:
 
+public:
+
 	//The 3 dimensions
 	float x;
 	float y;
@@ -12,7 +14,6 @@ private:
 	//The extra to make it 16 byte-aligned
 	float w;
 
-public:
 
 	//Constructors
 	//Default Constructor
@@ -25,7 +26,7 @@ public:
 	//Copy constructor
 	Vector3D(const Vector3D &_source);
 
-	//Equal constructor
+	//Equal operator
 	Vector3D operator=(const Vector3D &_source);
 
 	//Destructor
@@ -46,6 +47,13 @@ public:
 	bool operator==(const Vector3D &_source);
 	//Not equals operator
 	bool operator!=(const Vector3D &_source);
+
+
+	//Static functions
+	static float Dot(const Vector3D &_lhs, const Vector3D &_rhs);
+	static Vector3D& CrossProduct(const Vector3D &_lhs, const Vector3D &_rhs);
+	static float Magnitude(const Vector3D &_source);
+	static Vector3D& Normalize(const Vector3D &_source);
 
 };
 
