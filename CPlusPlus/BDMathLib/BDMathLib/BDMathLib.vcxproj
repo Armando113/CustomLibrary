@@ -81,6 +81,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Matrix4D.cpp" />
     <ClCompile Include="Vector4D.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -10,10 +10,15 @@ class Matrix4D;
 class Vector4D
 {
 private:
-
 	//No one should access this constructor (Floats only!!)
 	template<typename T>
 	Vector4D(const T &_x, const T &_y, const T &_z);
+
+
+
+public:
+	//Let Matrix4D access us
+	friend class Matrix4D;
 
 #pragma warning( disable : 4201)
 	union
@@ -30,16 +35,12 @@ private:
 		};
 	};
 
-public:
-	//Let Matrix4D access us
-	friend class Matrix4D;
-
 	//Constructors
 	//Default Constructor
 	Vector4D();
 
 	//Custom constructor
-	Vector4D(const float &_x, const float &_y, const float &_z, const float &_w);
+	Vector4D(const float &_x, const float &_y, const float &_z, const float &_w = 1.0f);
 
 	//Intrinsic Constructor
 	Vector4D(const __m128 &_m);
